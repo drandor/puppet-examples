@@ -28,4 +28,12 @@ class frontend {
 
    class { "apache::service": stage => "service" }
 
+   $user = "jan"
+   $home = "home_$user"
+   $home_path = inline_template("<%= scope.lookupvar('::$home') %>")
+
+   file { "$home_path/test.txt":
+      content => "huhu",
+   }
+
 }
