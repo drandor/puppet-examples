@@ -1,0 +1,16 @@
+=pod
+
+=head1 Puppet Modules and Services
+
+These are some example Modules and Services
+
+=head1 Definitions
+
+=head2 Modules
+
+Modules are I<things> that can be used by different services. They should not depend on any project specific things, so that they can be used by many different projects.
+
+=head2 Services
+
+A Service is a I<thing> that exists of many I<modules>. A service describe a project specific system.
+
