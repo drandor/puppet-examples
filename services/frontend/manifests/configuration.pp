@@ -16,16 +16,8 @@
 # [Remember: No empty lines between comments and class definition]
 class frontend::configuration {
 
-   apache::server::vhost{ "simple": }
-
    php::configuration { "simple":
       path => "/var/www/simple/conf",
-   }
-
-   apache::server::configuration{ "simple":
-      conf => {
-         "keep_alive_timeout" => 15,
-      }
    }
 
 }
