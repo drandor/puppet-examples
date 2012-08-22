@@ -23,4 +23,14 @@ class frontend {
       "apache::service":         stage => "service";
    }
 
+   #include apache::server
+   #include frontend::fs
+   #include frontend::configuration
+   #include apache::service
+   #
+   #Class["apache::server"]
+   #   -> Class["frontend::fs"] 
+   #     -> Class["frontend::configuration"]
+   #        -> Class["apache::service"]
+
 }
