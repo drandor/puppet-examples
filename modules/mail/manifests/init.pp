@@ -18,12 +18,12 @@ class mail {
 
    define user($ensure = "present", $email) {
 
-      if $globals::mail_server_class == "dovecot" {
+      if $mail_server_class == "dovecot" {
          dovecot::user { $name: ensure => $ensure, email => $email }
       }
 
       else {
-         fail("No mail class defined! (${globals::mail_server_class}")
+         fail("No mail class defined! (${mail_server_class}")
       }
 
    }

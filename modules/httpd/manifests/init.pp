@@ -21,9 +21,14 @@ class httpd {
 
    define vhost() {
       
-      if $globals::httpd_server_class == "apache" {
+      if $httpd_server_class == "apache" {
          apache::server::vhost{ $name: caller => $caller_module_name }
       }
+
+      else {
+         fail("No httpd class defined! (${httpd_server_class}")
+      }
+
 
    }
 
