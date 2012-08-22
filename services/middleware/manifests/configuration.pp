@@ -2,7 +2,7 @@
 # vim: set ts=3 sw=3 tw=0:
 # vim: set expandtab:
 #
-# Class: frontend::configuration
+# Class: middleware::configuration
 #
 # Parameters:
 #
@@ -11,13 +11,13 @@
 # Requires:
 #
 # Sample Usage:
-# class { "apache::server": ensure => "present|absent" }
+# class { "middleware::configuration": ensure => "present|absent" }
 #
 # [Remember: No empty lines between comments and class definition]
-class frontend::configuration {
+class middleware::configuration {
 
-   php::configuration { "frontend":
-      path => "/var/www/frontend/conf",
+   php::configuration { "middleware":
+      path => "/var/www/middleware/conf",
    }
 
 }

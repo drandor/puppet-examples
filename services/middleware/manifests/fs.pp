@@ -2,7 +2,7 @@
 # vim: set ts=3 sw=3 tw=0:
 # vim: set expandtab:
 #
-# Class: frontend::fs
+# Class: middleware::fs
 #
 # Parameters:
 #
@@ -11,12 +11,12 @@
 # Requires:
 #
 # Sample Usage:
-# class { "frontend::fs": ensure => "present|absent" }
+# class { "middleware::fs": ensure => "present|absent" }
 #
 # [Remember: No empty lines between comments and class definition]
-class frontend::fs {
+class middleware::fs {
 
-   file { "/var/www/frontend":
+   file { "/var/www/middleware":
       ensure => "directory",
       owner  => "www-data",
       group  => "www-data",
@@ -24,7 +24,7 @@ class frontend::fs {
 
    ->
 
-   file { "/var/www/frontend/htdocs":
+   file { "/var/www/middleware/htdocs":
       ensure => "directory",
       owner  => "www-data",
       group  => "www-data",
@@ -32,7 +32,7 @@ class frontend::fs {
 
    ->
 
-   file { "/var/www/frontend/conf":
+   file { "/var/www/middleware/conf":
       ensure => "directory",
       owner  => "www-data",
       group  => "www-data",
