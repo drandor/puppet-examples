@@ -16,6 +16,8 @@
 # [Remember: No empty lines between comments and class definition]
 class frontend::configuration {
 
+   httpd::vhost { "frontend": }
+
    php::configuration { "frontend":
       path => "/var/www/frontend/conf",
    }

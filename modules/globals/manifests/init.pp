@@ -19,4 +19,7 @@ class globals {
    # default mailserver class is dovecot
    $mail_server_class = "dovecot"
 
+   # default httpd server class is apache
+   $httpd_server_class = "apache"
+
 }

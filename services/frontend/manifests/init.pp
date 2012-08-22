@@ -16,6 +16,8 @@
 # [Remember: No empty lines between comments and class definition]
 class frontend {
 
+   include httpd
+
    class {
       "frontend::fs":            stage => "postpackage";
       "frontend::configuration": stage => "configuration";
